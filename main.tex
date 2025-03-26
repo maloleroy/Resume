@@ -1,0 +1,118 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{luatex85} % Restores compatibility for some old PDFTeX commands
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\definecolor{nord10}{HTML}{5e81ac}
+
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+% \usepackage{fontspec}
+% \setmainfont{QTBasker}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-7pt}\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\newcommand{\techs}[1]{
+  \color{nord10}\textbf{\small #1}\color{black}
+}
+
+\newcommand{\gh}[1]{
+  \footnotesize \href{https://github.com/Firefnix/#1/}{\raisebox{-0.2\height}\ \underline{github.com/Firefnix/#1}} \small
+}
+
+\newcommand{\ghicon}[1]{
+  \href{https://github.com/Firefnix/#1/}{\raisebox{-0.2\height}\faGithub}
+}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeItemBackwards}[1]{
+  \hspace{8pt} \textup{\tiny \raisebox{0.5ex}{\textbullet} \small \hspace{0pt} #1}
+}
+
+\newcommand{\projectItemBackwards}[1]{
+  \hspace{11pt} \textup{\tiny \raisebox{0.5ex}{\textbullet} \small \hspace{3pt} #1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #2} \\
+      \textit{\small#3} & \techs{#4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingContinue}[2]{
+  \vspace{-3pt}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \techs{#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[5]{
+  \vspace{-3pt}\item
+  \begin{tabular}{p{0.6\textwidth}p{0.2\textwidth}>{\raggedleft\arraybackslash}p{0.2\textwidth}}
+      \textbf{#1} & {#5} & {\small #2} \\
+      % \projectItemBackwards{#3} & & \techs{#4} \\
+    \end{tabular}\vspace{-3pt}
+
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      % \textbf{#1} & & {\small #2} \\
+      \projectItemBackwards{#3} & \techs{#4} \\
+    \end{tabular*}\vspace{-14pt}
+    }
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\begin{document}
+
+% \input{french-vr}
+
+% \newpage
+
+\input{english}
+
+\end{document}
