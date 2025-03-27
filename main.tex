@@ -54,7 +54,7 @@
 }
 
 \newcommand{\ghicon}[1]{
-  \href{https://github.com/Firefnix/#1/}{\raisebox{-0.2\height}\faGithub}
+  \href{https://github.com/Firefnix/#1/}{\faGithub}
 }
 
 \newcommand{\resumeItem}[1]{
@@ -68,10 +68,18 @@
 }
 
 \newcommand{\projectItemBackwards}[1]{
-  \hspace{11pt} \textup{\tiny \raisebox{0.5ex}{\textbullet} \small \hspace{3pt} #1}
+  \hspace{11pt} \textup{\tiny \raisebox{0.5ex}{\textbullet} \small \hspace{1pt} #1}
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} | #5 & {\small #2} \\
+      \textit{\small#3} & \techs{#4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingNoLocation}[4]{
   \vspace{-3pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & {\small #2} \\
@@ -86,10 +94,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[5]{
+\newcommand{\resumeProjectHeading}[6]{
   \vspace{-3pt}\item
   \begin{tabular}{p{0.6\textwidth}p{0.2\textwidth}>{\raggedleft\arraybackslash}p{0.2\textwidth}}
-      \textbf{#1} & {#5} & {\small #2} \\
+      \textbf{#1} | #6 & {#5} & {\small #2} \\
       % \projectItemBackwards{#3} & & \techs{#4} \\
     \end{tabular}\vspace{-3pt}
 
