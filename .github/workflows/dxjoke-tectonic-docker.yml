@@ -13,5 +13,5 @@ jobs:
       - name: Upload pdf
         uses: actions/upload-artifact@v4
         with:
-          name: main.zip
+          name: main
           path: main.pdf
