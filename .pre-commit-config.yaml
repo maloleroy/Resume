@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: build-pdfs
+        name: Build PDFs with pdflatex
+        entry: bash -c "pdflatex main.tex && cd fr && pdflatex main.tex && cd .. && git add main.pdf fr/main.pdf"
+        language: system
+        pass_filenames: false
