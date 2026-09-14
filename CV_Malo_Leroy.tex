@@ -64,12 +64,14 @@
   }
 }
 
+\newcommand{\resumeBullet}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
 \newcommand{\resumeItemBackwards}[1]{
-  \hspace{8pt} \textup{\tiny \raisebox{0.5ex}{\textbullet} \small \hspace{0pt} #1}
+  \hspace{8pt} \textup{\resumeBullet \small \hspace{0pt} #1}
 }
 
 \newcommand{\projectItemBackwards}[1]{
-  \hspace{11pt} \textup{\tiny \raisebox{0.5ex}{\textbullet} \small \hspace{1pt} #1}
+  \hspace{11pt} \textup{\resumeBullet \small \hspace{1pt} #1}
 }
 
 \newcommand{\resumeSubheading}[5]{
@@ -109,8 +111,8 @@
     }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemi{\resumeBullet}
+\renewcommand\labelitemii{\resumeBullet}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
