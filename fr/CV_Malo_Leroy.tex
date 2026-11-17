@@ -23,6 +23,10 @@
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 
+% Set to \printabletrue for a PDF without clickable links.
+\newif\ifprintable
+\printablefalse
+
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -45,16 +49,22 @@
 
 \newcommand{\ghusername}{maloleroy}
 
+\newcommand{\cvhref}[2]{%
+  \ifprintable #2\else \href{#1}{#2}\fi
+}
+
 \newcommand{\techs}[1]{
   \color{nord10}\textbf{\small #1}\color{black}
 }
 
 \newcommand{\gh}[1]{
-  \footnotesize \href{https://github.com/\ghusername/#1/}{\raisebox{-0.2\height}\ \underline{github.com/\ghusername/#1}} \small
+  \footnotesize \cvhref{https://github.com/\ghusername/#1/}{\raisebox{-0.2\height}\ \underline{github.com/\ghusername/#1}} \small
 }
 
 \newcommand{\ghicon}[1]{
-  \href{https://github.com/\ghusername/#1/}{\raisebox{-0.1\height} \faLink}
+  \ifprintable\else
+    \cvhref{https://github.com/\ghusername/#1/}{\raisebox{-0.1\height} \faLink}%
+  \fi
 }
 
 \newcommand{\resumeItem}[1]{
